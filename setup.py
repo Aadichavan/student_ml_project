@@ -4,13 +4,13 @@ from typing import List
 
 def get_requirements(file_path:str)->List[str]:
 
-    requirements=[]
+    requiremenets=[]
 
-    with open(file_path) as file_obj:
-        requirements=file_obj.readlines()
-        requirements=[req.replace("\n","") for req in requirements]
+    with open (file_path) as file_obj:
+        requiremenets=file_obj.readline()
+        requiremenets=[ req.replace ("\n","")for req in requiremenets]
 
-    return requirements
+    return requiremenets
 
 
 
@@ -18,13 +18,12 @@ def get_requirements(file_path:str)->List[str]:
 
 
 setup(
-    name="student_ml_project",
-    version='0.0.1',
-    author='Newgen Infotech',
-    author_email='aadichavan1705@gmail.com',
-    packages=find_packages(),
-    install_requires=get_requirements('requirements.txt')
+     
+     name='student_ml_project',
+     version='0.0.1',
+     author="Newgen infotech",
+     author_email='Balasaheb.aiml@gmail.com',
+     packages=find_packages(),
+     install_requires=get_requirements('requirements.txt')
 
-
-    
 )
